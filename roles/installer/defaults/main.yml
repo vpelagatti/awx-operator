@@ -263,8 +263,10 @@ postgres_extra_volumes: ''
 
 # Use these image versions for Ansible AWX.
 
-_image: quay.io/ansible/awx
-_image_version: "{{ lookup('env', 'DEFAULT_AWX_VERSION') or 'latest' }}"
+#_image: quay.io/ansible/awx
+_image: quay.io/victor_pelagatti/awx_devel
+#_image_version: "{{ lookup('env', 'DEFAULT_AWX_VERSION') or 'latest' }}"
+_image_version: "devel"
 _redis_image: docker.io/redis
 _redis_image_version: 7
 _postgres_image: quay.io/sclorg/postgresql-15-c9s
